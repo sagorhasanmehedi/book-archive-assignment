@@ -64,14 +64,14 @@ const update = (arr) => {
             <div class="card-body">
              <h3 class="card-title text-center">${book.title}</h3>
               <h6 class="card-title text-center "> ${
-                book.author_name ? book.author_name : ""
+                book.author_name?.[0] ? book.author_name[0] : ""
               }</h6>
               <h6 class="card-title text-center ">publisher: ${
-                book.publisher?.[0]
+                book.publisher?.[0] ? book.publisher[0] : ""
               }</h6>
 
               <p class="card-text text-center">publish year: ${
-                book.publish_year?.[0]
+                book.publish_year?.[0] ? book.publish_year[0] : ""
               }</p>
             </div>
           </div>
