@@ -53,13 +53,14 @@ const update = (arr) => {
 
     //   card create and uplode function----->
     arr.forEach((book) => {
-      console.log(book);
+      console.log(book.cover_i);
       const newelem = document.createElement("div");
       newelem.classList.add("col");
       newelem.innerHTML = `
             <div class="card h-100 border-0 shadow">
+            
             <img src="https://covers.openlibrary.org/b/id/${
-              book.cover_i
+              book?.cover_i ? book.cover_i : 10909258
             }-L.jpg" class="card-img-top " alt="...">
             <div class="card-body">
              <h3 class="card-title text-center">${book.title}</h3>
@@ -80,3 +81,4 @@ const update = (arr) => {
     });
   }
 };
+
